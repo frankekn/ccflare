@@ -126,7 +126,11 @@ export class AgentRegistry {
 				if (modelLower === "opus") {
 					model = ALLOWED_MODELS[0]; // claude-opus-4-20250514
 				} else if (modelLower === "sonnet") {
-					model = ALLOWED_MODELS[1]; // claude-sonnet-4-20250514
+					model = ALLOWED_MODELS[3]; // claude-sonnet-4-5-20250929 (latest)
+				} else if (modelLower === "sonnet-4") {
+					model = ALLOWED_MODELS[2]; // claude-sonnet-4-20250514
+				} else if (modelLower === "sonnet-4.5") {
+					model = ALLOWED_MODELS[3]; // claude-sonnet-4-5-20250929
 				} else if (this.isValidModel(data.model)) {
 					model = data.model as AllowedModel;
 				} else {

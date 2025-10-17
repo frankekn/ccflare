@@ -33,6 +33,8 @@ const MODEL_COLORS: Record<string, string> = {
 	"claude-3.5-sonnet": COLORS.purple,
 	"claude-3.5-haiku": COLORS.success,
 	"claude-3-opus": COLORS.blue,
+	"claude-sonnet-4": COLORS.purple,
+	"claude-sonnet-4.5": COLORS.primary,
 	"claude-opus-4": COLORS.pink,
 	// Add more models as needed
 };
