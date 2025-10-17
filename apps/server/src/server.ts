@@ -201,9 +201,11 @@ export default function startServer(options?: {
 	};
 
 	// Hot reload strategy configuration
-	config.on("change", (changeType, fieldName) => {
-		if (fieldName === "strategy") {
-			log.info(`Strategy configuration changed: ${changeType}`);
+	config.on("change", ({ key, oldValue, newValue }) => {
+		if (key === "lb_strategy") {
+			log.info(
+				`Strategy configuration changed from ${String(oldValue)} to ${String(newValue)}`,
+			);
 			const newStrategyName = config.getStrategy();
 			// For now, only SessionStrategy is supported
 			if (newStrategyName === "session") {
