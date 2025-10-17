@@ -56,6 +56,16 @@ const BUNDLED_PRICING: ApiResponse = {
 					cache_write: 3.75,
 				},
 			},
+			[CLAUDE_MODEL_IDS.HAIKU_4_5]: {
+				id: CLAUDE_MODEL_IDS.HAIKU_4_5,
+				name: MODEL_DISPLAY_NAMES[CLAUDE_MODEL_IDS.HAIKU_4_5],
+				cost: {
+					input: 1,
+					output: 5,
+					cache_read: 0.1,
+					cache_write: 1.25,
+				},
+			},
 			[CLAUDE_MODEL_IDS.SONNET_4]: {
 				id: CLAUDE_MODEL_IDS.SONNET_4,
 				name: MODEL_DISPLAY_NAMES[CLAUDE_MODEL_IDS.SONNET_4],
